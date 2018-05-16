@@ -1,0 +1,73 @@
+
+<div class="w3-card-4 p-3  m-3 bg-white divScroll">
+
+  <div *ngFor="let reportDetail of reportById">
+   
+
+        <h3 class="text-dark"> {{reportDetail.title}}   </h3>
+        <!--  <h3>{{id}}</h3>  -->
+      <hr>
+
+          <div class="row">
+          
+            <ul class="col-sm-4 list-unstyled">
+              <li class="text-info">Category</li>
+              <li class="text-secondary">{{reportDetail.Category_Name}}</li>
+            </ul>
+          
+            <ul class="col-sm-4 list-unstyled">
+                <li class="text-info">Publication Date</li>
+                <li class="text-secondary">{{reportDetail.Created_Date| date : 'dd MMMM yyyy'}}</li>
+            </ul>
+            <ul class="col-sm-4 list-unstyled">
+                <li class="text-info">Publisher Name</li>
+                <li class="text-secondary">Global Markets</li>
+            </ul>
+              
+        </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+              
+              
+            <button class="btn btnDefault btn-block" (click)="setTitleForQueryForm(reportDetail.title)" routerLink="/reportqueryform/{{reportDetail.id}}" >Buy Now</button>
+          </div>
+
+          <div class="col-sm-4">
+              <button class="btn btnDefault btn-block" (click)="setTitleForQueryForm(reportDetail.title)" routerLink="/reportqueryform/{{reportDetail.id}}">Request for Sample</button>
+            </div>
+            <div class="col-sm-4">
+                <button class="btn btnDefault btn-block" (click)="setTitleForQueryForm(reportDetail.title)" routerLink="/reportqueryform/{{reportDetail.id}}">Inquire before Buying</button>
+              </div>
+            
+
+        </div>
+
+          <nav>
+              <div class="mt-3 nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Description</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Table of Content</a>
+           <!--     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Companies</a>  -->
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active m-3" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                
+                  <!-- For Description -->
+                  <p [innerHTML]="reportDetail.discription"></p>
+               
+               <!--   <p [innerHTML]  {{reportDetail.discription}} -->
+              </div>
+
+
+              <div class="tab-pane fade m-3" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                <!-- Table of Content Section -->
+                  <button class="btn btnDefault btn-block" (click)="setTitleForQueryForm(reportDetail.title)" routerLink="/reportqueryform/{{reportDetail.id}}" >Request for Table of Content</button>
+       
+         </div>
+        <!--   <div class="tab-pane fade m-3" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div> -->
+        </div>
+     </div>
+</div>
+

@@ -1,0 +1,16 @@
+#divScroll {
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
+}
+
+.btnDefault {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #0081B3;
+}
+
+.btnDefault:hover {
+    background-color:#0081B3;
+    color: white;
+}

@@ -1,0 +1,62 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="bg-light text-dark h-25 p-4">
+    <div class ="container">
+        
+        <div class="row">
+            <div class="col-2" id="homeLogo" (click)="onHomeClicked()" >
+                <img src="../assets/img/gmf-logo.png" style="width:180px">
+            </div>
+
+            <div class="col-2 offset-8">
+ 
+                    <p><span class="oi oi-phone"></span> 1800-22-2222 </p>
+
+                    <p><span class="oi oi-phone"></span> 1800-22-2222</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #0081B3"> 
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/reportlistcontainer">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/aboutuscontainer">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/myservicescontainer">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/reportlistcontainer">My Reports</a>
+                </li>
+            </ul>
+    </nav>
+    
+
+<div class="container-fluid" style="background-color: #fafafa; height: 100%">    
+
+<div class="row">
+
+    <div class="col-3" style="margin-top: 15px"> 
+        <app-sidemenu></app-sidemenu>
+     </div>
+
+     <div class="col-9"> 
+        <router-outlet></router-outlet>        
+    </div>
+
+</div>
+
+</div>
+<footer class="footer">
+        <div class="container text-center">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-skype"></i></a>
+        </div>
+      </footer>

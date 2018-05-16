@@ -1,0 +1,31 @@
+
+<div id="divScroll" class="w3-card-4 bg-white m-3">
+
+<h3 class="p-3">Reports</h3>
+<hr>
+   <div *ngFor="let reportList of modelReportList">
+      <div class="container-fluid">      
+        
+          <div class="card p-2">
+              
+                
+            <div class='row'>
+                <div id=ReportTitle class="col-sm-8" (click)="getdecodedTitle(reportList.title)" routerLink="/selectedReport/{{reportList.id}}" >
+                    <h5 class="text-dark font-weight-bold">{{reportList.title}} </h5>
+                </div>
+                <div class="col-sm-4">
+                        <p class=" font-weight-bold">Publication Date : {{reportList.Created_Date |date : 'dd MMMM yyyy'}} </p>
+                    </div>
+                </div>
+ 
+              <div class="multiline-ellipsis ml-1">
+                    <p [innerHTML]="reportList.discription"></p>   </div>
+                       <a class="ml-1" (click)="setDescriptionForSelectedReport(reportList.discription)" routerLink="/selectedReport/{{reportList.id}}">Read more..</a>             
+        </div>
+
+    </div>
+    
+</div>
+ 
+  
+  

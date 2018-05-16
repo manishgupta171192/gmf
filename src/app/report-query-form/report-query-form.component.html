@@ -1,0 +1,90 @@
+
+<h3 class="m-3">  {{reportTitle}}   </h3>
+
+<!--    <div *ngFor = "let modalreport of modalReportList">  -->
+
+
+<div class="w3-card-4 p-3">
+
+  <h5 class="card-title">Please fill in the form below to receive a sample of this report.</h5>
+
+<form id="divScroll">
+
+  <select class="bootstrap-select">
+    <option value="1" selected="selected">Mr.</option>
+    <option value="2">Mrs.</option>
+  </select>
+
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp" placeholder="First Name">
+   
+  <!--  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  -->
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+  </div>
+  
+  <div class="form-group">
+    <label for="countryCode">Country code</label>
+    <input type="number" class="form-control" id="countryCode" placeholder="Country code">
+  </div>
+  
+  <div class="form-group">
+    <label for="phoneNumber">Phone number</label>
+    <input type="number" class="form-control" id="phoneNumber" placeholder="Phone number">
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email Address">
+  </div>
+  
+  <!--
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+  </div>
+-->
+
+  <fieldset class="form-group">
+    <legend>I would like to:</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Procure the full report
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Customise the report
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Speak with the analyst
+      </label>
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Get an overview of the market
+      </label>
+    </div>
+
+  </fieldset>
+  <button type="submit" class="btn btn-primary" style="background-color: #0081B3">Submit</button>
+  <button class="btn btn-primary" (click)="goBack()" style="background-color: #0081B3" >Go back</button>
+  
+</form>
+
+</div>
+  
+<!--  </div> -->
+

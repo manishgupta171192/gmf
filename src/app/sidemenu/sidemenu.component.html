@@ -1,0 +1,19 @@
+<div class="container-fluid w3-card-4 bg-white p-3">
+                
+                <input type="search" placeholder="Search">
+
+
+                    <hr>
+    
+     <h5 style="font-family:inherit; font-style: oblique; color: #424242;">Market Research Reports</h5>
+
+
+     <div *ngFor="let category of modelCategoryList">
+  
+        <p><a routerLink="/reportlistcontainer">{{category.Category_Name}}</a></p>      
+  
+      </div>
+
+    </div>
+    
+    

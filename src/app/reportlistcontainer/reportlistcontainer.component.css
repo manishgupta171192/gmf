@@ -1,0 +1,21 @@
+#divScroll {
+    width: 100%;
+    height: 400px;
+    overflow: scroll;
+}
+
+.multiline-ellipsis {
+    display: -webkit-box;
+    height: 65px;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#ReportTitle:hover {
+    cursor: pointer;
+    text-decoration:underline;
+    border-bottom: 0px solid blue;
+}
